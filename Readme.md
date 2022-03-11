@@ -1,0 +1,1 @@
+## Template for React-Native redux-toolkit, axios, localization and formic
