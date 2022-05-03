@@ -10,6 +10,7 @@ import {
   PURGE,
   REGISTER,
 } from 'redux-persist';
+import autoMergeLevel2 from 'redux-persist/lib/stateReconciler/autoMergeLevel2';
 
 import tutorialReducer from './slices/tutorials';
 import localizationSlice from './slices/localizations';
@@ -17,7 +18,8 @@ import localizationSlice from './slices/localizations';
 const persistConfig = {
   key: 'root',
   storage: AsyncStorage,
-  whitelist: ['localization']
+  whitelist: ['localization'],
+  stateReconciler: autoMergeLevel2
 };
 
 const reducers = combineReducers({
