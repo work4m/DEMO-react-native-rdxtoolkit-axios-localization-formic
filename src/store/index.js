@@ -1,5 +1,5 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
-import AsyncStorage from '@react-native-async-storage/async-storage';
+import { MMKVLoader } from "react-native-mmkv-storage";
 import logger from 'redux-logger';
 import {
   persistReducer,
@@ -17,7 +17,7 @@ import localizationSlice from './slices/localizations';
 
 const persistConfig = {
   key: 'root',
-  storage: AsyncStorage,
+  storage: new MMKVLoader().initialize(),
   whitelist: ['localization'],
   stateReconciler: autoMergeLevel2
 };
