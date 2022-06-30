@@ -5,8 +5,13 @@
   "scripts": {
     "android": "react-native run-android",
     "ios": "react-native run-ios",
+    "android-clean": "cd android && ./gradlew clean",
     "start": "react-native start",
     "pod": "cd ios && pod install",
+    "android-build": "cd android && gradlew assembleRelease",
+    "android-build-mac": "cd android && ./gradlew assembleRelease",
+    "android-build-aab-mac": "cd android && ./gradlew bundleRelease",
+    "ios-build": "react-native bundle --entry-file index.js --platform ios --dev false --bundle-output ios/main.jsbundle --assets-dest ios",
     "test": "jest",
     "lint": "eslint ."
   },
