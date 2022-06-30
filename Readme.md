@@ -1,7 +1,7 @@
 ## Template for React-Native redux-toolkit, axios, localization and formic
 
 install process
-yarn install @react-navigation/native @react-navigation/native-stack @reduxjs/toolkit axios formik react-native-safe-area-context react-native-screens react-redux redux-persist yup react-native-mmkv-storage && yarn pod
+yarn add @react-navigation/native @react-navigation/native-stack @reduxjs/toolkit axios formik react-native-safe-area-context react-native-screens react-redux redux-persist yup react-native-mmkv-storage && yarn pod
 
 copy following for package
     "android": "react-native run-android",
